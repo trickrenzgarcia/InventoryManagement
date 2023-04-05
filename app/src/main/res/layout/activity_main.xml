@@ -18,10 +18,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-light"
-            android:background="@color/yellow"
             android:textSize="36dp"
             android:textStyle="bold"
-            android:textColor="@color/white"
+            android:textColor="@color/bgColorPrimary"
             android:text="Inventory\nSystem"
             android:padding="10dp"
             />
@@ -37,71 +36,70 @@
         android:columnCount="2"
         android:rowCount="3">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card1"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            app:cardCornerRadius="5dp"
-            app:cardElevation="0dp"
-            android:layout_margin="10dp"
-            android:layout_width="0dp"
-            android:layout_height="0dp">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/card1"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            app:cardCornerRadius="5dp"-->
+<!--            app:cardElevation="0dp"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="0dp">-->
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
 
-                <ImageView
-                    android:id="@+id/user_icon"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/usericon"
-                    />
+<!--                <ImageView-->
+<!--                    android:id="@+id/user_icon"-->
+<!--                    android:layout_width="80dp"-->
+<!--                    android:layout_height="80dp"-->
+<!--                    android:layout_centerInParent="true"-->
+<!--                    android:src="@drawable/usericon" />-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/user_icon"
-                    android:layout_centerInParent="true"
-                    android:textColor="@color/yellow"
-                    android:text="USER MANAGEMENT"
-                    android:textStyle="bold" />
-            </RelativeLayout>
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@+id/user_icon"-->
+<!--                    android:layout_centerInParent="true"-->
+<!--                    android:textColor="@color/yellow"-->
+<!--                    android:text="USER MANAGEMENT"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </RelativeLayout>-->
 
-        </androidx.cardview.widget.CardView>
+<!--        </androidx.cardview.widget.CardView>-->
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card2"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            app:cardCornerRadius="5dp"
-            app:cardElevation="0dp"
-            android:layout_margin="10dp"
-            android:layout_width="0dp"
-            android:layout_height="0dp">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/card2"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_rowWeight="1"-->
+<!--            app:cardCornerRadius="5dp"-->
+<!--            app:cardElevation="0dp"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="0dp">-->
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
 
-                <ImageView
-                    android:id="@+id/categories_icon"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/categoriesicon"
-                    />
+<!--                <ImageView-->
+<!--                    android:id="@+id/categories_icon"-->
+<!--                    android:layout_width="80dp"-->
+<!--                    android:layout_height="80dp"-->
+<!--                    android:layout_centerInParent="true"-->
+<!--                    android:src="@drawable/categoriesicon"-->
+<!--                    />-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/categories_icon"
-                    android:layout_centerInParent="true"
-                    android:textColor="@color/yellow"
-                    android:text="CATEGORIES"
-                    android:textStyle="bold" />
-            </RelativeLayout>
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@+id/categories_icon"-->
+<!--                    android:layout_centerInParent="true"-->
+<!--                    android:textColor="@color/yellow"-->
+<!--                    android:text="CATEGORIES"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </RelativeLayout>-->
 
-        </androidx.cardview.widget.CardView>
+<!--        </androidx.cardview.widget.CardView>-->
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card3"
@@ -115,13 +113,13 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <ImageView
                     android:id="@+id/product_icon"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_centerInParent="true"
-                    android:src="@drawable/productpng"
-                    />
+                    android:src="@drawable/productpng" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -199,6 +197,38 @@
 
         </androidx.cardview.widget.CardView>
 
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card6"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            android:layout_margin="10dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/user_logout_icon"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_baseline_logout_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/user_logout_icon"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/yellow"
+                    android:textSize="16dp"
+                    android:text="LOGOUT"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
 
     </GridLayout>
 

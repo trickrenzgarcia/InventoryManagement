@@ -10,23 +10,25 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private CardView c1,c2,c3,c4,c5;
+    private CardView c1,c2,c3,c4,c5,c6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        c1 = findViewById(R.id.card1);
-        c2 = findViewById(R.id.card2);
+        //c1 = findViewById(R.id.card1);
+        //c2 = findViewById(R.id.card2);
         c3 = findViewById(R.id.card3);
         c4 = findViewById(R.id.card4);
         c5 = findViewById(R.id.card5);
+        c6 = findViewById(R.id.card6);
 
-        setOnCardClicked(c1, 1);
-        setOnCardClicked(c2, 2);
+        //setOnCardClicked(c1, 1);
+        //setOnCardClicked(c2, 2);
         setOnCardClicked(c3, 3);
         setOnCardClicked(c4, 4);
         setOnCardClicked(c5, 5);
+        setOnCardClicked(c6, 6);
     }
 
     private void setOnCardClicked(CardView card, int opt){
@@ -52,6 +54,10 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 5:
                         startActivity(new Intent(MainActivity.this, SalesReport.class));
+                        finish();
+                        break;
+                    case 6:
+                        startActivity(new Intent(MainActivity.this, LoginActivity.class));
                         finish();
                         break;
                     default:

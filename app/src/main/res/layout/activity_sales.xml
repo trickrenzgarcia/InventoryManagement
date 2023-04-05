@@ -1,9 +1,194 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Sales">
+    tools:context=".MainActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/sales_title"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/back_button_sales"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_round_arrow_back_24" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif-light"
+            android:padding="10dp"
+            android:text="ADD SALES"
+            android:textSize="32dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_below="@+id/sales_title"
+        android:id="@+id/sales_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewSales"
+        android:layout_width="match_parent"
+        android:layout_height="265dp"
+        android:layout_below="@+id/sales_title"
+        android:layout_marginTop="1dp" />
+    <ScrollView
+        android:layout_below="@+id/recyclerViewSales"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+        android:id="@+id/sales_insertLinear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingTop="30dp"
+            android:paddingBottom="15dp"
+            android:text="ADD SALES"
+            android:textColor="@color/textColorPrimary"
+            android:textAlignment="center"
+            android:textSize="34dp"
+            android:textStyle="bold" />
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bgColorPrimary"
+                    android:hint="Product name"
+                    android:inputType="none">
+                    <AutoCompleteTextView
+                        android:id="@+id/filled_exposed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_baseline_create_24"
+                        android:drawablePadding="5dp"
+                        android:textSize="18sp"
+                        android:editable="false"
+                        android:inputType="none">
+
+                    </AutoCompleteTextView>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/etQuantity_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:hint="Quantity sales">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editQuantitySales"
+                        android:drawablePadding="6dp"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@color/textColorPrimary"
+                        android:drawableLeft="@drawable/ic_baseline_production_quantity_limits_24"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:textSize="18sp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/etPrice_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:hint="Price sales">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editPriceSales"
+                        android:layout_width="match_parent"
+                        android:drawablePadding="6dp"
+                        android:layout_marginBottom="5dp"
+                        android:drawableLeft="@drawable/ic_baseline_price_change_24"
+                        android:editable="false"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:hint="Sales Description">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editDescriptionSales"
+                        android:layout_width="match_parent"
+                        android:drawablePadding="6dp"
+                        android:layout_marginBottom="5dp"
+                        android:drawableLeft="@drawable/ic_baseline_description_24"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textSize="18sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:hint="Sales Date">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tv_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="6dp"
+                        android:layout_marginBottom="30dp"
+                        android:inputType="none"
+                        android:editable="false"
+                        android:drawableLeft="@drawable/ic_baseline_calendar_month_24"
+                        android:textSize="18sp"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAdd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                app:backgroundTint="@color/yellow"
+                android:textColor="@color/textColorPrimary"
+                android:textStyle="bold"
+                android:padding="15dp"
+                android:textSize="24sp"
+                android:text="ADD SALES"
+                android:layout_margin="15dp"
+                app:cornerRadius="16dp"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

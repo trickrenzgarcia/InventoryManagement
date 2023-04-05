@@ -21,7 +21,7 @@
             android:textSize="36dp"
             android:textStyle="bold"
             android:textColor="@color/white"
-            android:text="Inventory\nSystem"
+            android:text="User Manage"
             android:padding="10dp"
             />
     </LinearLayout>
